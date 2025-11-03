@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono } from "next/font/google";
 import config from "../config/config.json";
-import "./globals.css";
-
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: "--font-ibm-plex-mono",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+import "../css/globals.css";
 
 export const metadata: Metadata = {
   title: config.site.title,
-  description: config.metadata.meta_description,
+  description: config.site.description,
 };
 
 export default function RootLayout({
@@ -21,8 +14,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="shortcut icon" href={config.site.favicon} />
-      <body className={`${ibmPlexMono.variable} antialiased`}>{children}</body>
+     <head>
+       <link rel="shortcut icon" href={config.site.favicon} />
+      <meta property="og:image" content={config.site.image} />
+
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="anonymous"
+      />
+      <link
+        href={`https://fonts.googleapis.com/css2?family=${config.style.font}&display=swap`}
+        rel="stylesheet"
+      />
+     </head>
+      <body>{children}</body>
     </html>
   );
 }

@@ -1,0 +1,9 @@
+body {
+  @apply bg-body text-text font-primary;
+}
+.container {
+  @apply mx-auto px-4 max-w-[1140px]! bg-container my-14;
+}
+.section {
+  @apply py-4;
+}

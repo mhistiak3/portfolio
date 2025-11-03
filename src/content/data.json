@@ -1,0 +1,27 @@
+{
+    "hero": {
+        "name": "Istiak Ahammed",
+        "image": "/images/profile.jpeg",
+        "roles": [
+            "Javascript Developer",
+            "Nextjs Developer",
+            "Frontend Developer"
+        ],
+        "phone": "+8801810077098",
+        "email": "mhistiak2@gmail.com",
+        "socials":[
+            {
+                "name": "FaGithub",
+                "url": "https://github.com/mhistiak3"
+            },
+            {
+                "name": "FaLinkedin",
+                "url": "https://www.linkedin.com/in/istiak-ahammad/"
+            },
+            {
+                "name": "FaFacebook",
+                "url": "https://facebook.com/mhistiak3"
+            }
+        ]
+    }
+}

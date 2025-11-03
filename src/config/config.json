@@ -1,14 +1,14 @@
 {
   "site": {
-    "title":  "Istiak Ahammad",
-    "base_url": "https://nextplate.netlify.app",
+    "title": "Istiak Ahammad",
+    "description": "Istiak Ahammad's Portfolio Website",
+    "image": "/images/og-image.png",
+    "base_url": "https://istiak-ahammad.netlify.app/",
     "base_path": "/",
+    "trailing_slash": false,
     "favicon": "/images/favicon.ico"
   },
-
-  "metadata": {
-    "meta_author": "Istiak Ahammad",
-    "meta_image": "/images/og-image.png",
-    "meta_description": "Istiak Ahammad's Portfolio Website"
+  "style": {
+    "font": "IBM+Plex+Mono:wght@300;400;500;600;700"
   }
 }
