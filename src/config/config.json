@@ -1,0 +1,14 @@
+{
+  "site": {
+    "title":  "Istiak Ahammad",
+    "base_url": "https://nextplate.netlify.app",
+    "base_path": "/",
+    "favicon": "/images/favicon.ico"
+  },
+
+  "metadata": {
+    "meta_author": "Istiak Ahammad",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Istiak Ahammad's Portfolio Website"
+  }
+}
