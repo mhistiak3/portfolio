@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Achievements from "@/components/Achievements";
 import EducationSkill from "@/components/EducationSkill";
 import Hero from "@/components/Hero";
 
@@ -9,6 +10,7 @@ export default function Home() {
         <Hero />
         <About />
         <EducationSkill />
+        <Achievements />
       </div>
     </main>
   );

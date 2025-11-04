@@ -87,5 +87,10 @@
         "level": 40
       }
     ]
+  },
+  "achievements": {
+    "completed_projects": 12,
+    "happy_clients": 10,
+    "years_of_experience": 2
   }
 }

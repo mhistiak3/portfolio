@@ -42,3 +42,9 @@ export type EducationSkillType = {
     level: number;
   }[];
 };
+
+export type AchievementsType = {
+  completed_projects: number;
+  happy_clients: number;
+  years_of_experience: number;
+};
