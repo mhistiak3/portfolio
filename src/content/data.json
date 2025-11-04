@@ -1,27 +1,35 @@
 {
-    "hero": {
-        "name": "Istiak Ahammed",
-        "image": "/images/profile.jpeg",
-        "roles": [
-            "Javascript Developer",
-            "Nextjs Developer",
-            "Frontend Developer"
-        ],
-        "phone": "+8801810077098",
-        "email": "mhistiak2@gmail.com",
-        "socials":[
-            {
-                "name": "FaGithub",
-                "url": "https://github.com/mhistiak3"
-            },
-            {
-                "name": "FaLinkedin",
-                "url": "https://www.linkedin.com/in/istiak-ahammad/"
-            },
-            {
-                "name": "FaFacebook",
-                "url": "https://facebook.com/mhistiak3"
-            }
-        ]
+  "hero": {
+    "name": "Istiak Ahammed",
+    "image": "/images/profile.jpeg",
+    "roles": ["Javascript Developer", "Nextjs Developer", "Frontend Developer"],
+    "phone": "+8801810077098",
+    "email": "mhistiak2@gmail.com",
+    "socials": [
+      {
+        "name": "FaGithub",
+        "url": "https://github.com/mhistiak3"
+      },
+      {
+        "name": "FaLinkedin",
+        "url": "https://www.linkedin.com/in/istiak-ahammad/"
+      },
+      {
+        "name": "FaFacebook",
+        "url": "https://facebook.com/mhistiak3"
+      }
+    ]
+  },
+  "about": {
+    "title": "I'm Istiak",
+    "description": "I'm Istiak Ahammed, a passionate JavaScript developer with expertise in Next.js and frontend development. I love creating dynamic and responsive web applications that provide exceptional user experiences. With a strong foundation in JavaScript and a keen eye for design, I make sure design is pixel-perfect. Let's build something amazing together!",
+    "cv": "/files/Istiak_Ahammed_CV.pdf",
+    "personal_info": {
+      "full_name": "Istiak Ahammed",
+      "date_of_birth": "16th May 2001",
+      "nationality": "Bangladesh",
+      "spoken_languages": "English, Bengali, Urdu, Arabic",
+      "interests": "Traveling, Reading, Coding"
     }
+  }
 }

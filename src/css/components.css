@@ -1,3 +1,11 @@
+.container {
+  @apply mx-auto  max-w-[1140px]! bg-container xl:my-14;
+}
+.section {
+  @apply p-6;
+}
+
+/* Animation */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -7,4 +15,47 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+@keyframes borderExpand {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  30% {
+    clip-path: inset(0 0 0 0);
+  }
+  70% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+.section-heading {
+  @apply text-lg text-white font-medium mb-6 relative;
+}
+.section-heading::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 80px;
+  top: 30px;
+  left: 0;
+  border: 1px dashed var(--color-primary);
+}
+
+.btn {
+  @apply px-3 py-2 text-sm cursor-pointer;
+}
+.btn-primary {
+  @apply bg-heading/10 text-heading hover:bg-heading/20 transition;
+}
+.personal_info {
+  @apply flex flex-col  gap-2;
+}
+.personal_info li {
+  @apply text-sm flex gap-4;
+}
+.personal_info li b {
+  @apply font-medium w-30 block;
 }

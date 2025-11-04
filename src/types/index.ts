@@ -10,3 +10,16 @@ export type Social = {
   name: string;
   url: string;
 };
+
+export type AboutType = {
+  title: string;
+  description: string;
+  cv: string;
+  personal_info: {
+    full_name: string;
+    date_of_birth: string;
+    nationality: string;
+    spoken_languages: string;
+    interests: string;
+  };
+};

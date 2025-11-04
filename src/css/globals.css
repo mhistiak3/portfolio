@@ -9,21 +9,5 @@
   --color-text: #8997bd;
   --color-heading: #4d79f6;
   --color-dark: #060b1b;
-  --font-primary: "IBM Plex Mono", monospace;
-}
-
-
-@keyframes borderExpand {
-  0% {
-    clip-path: inset(0 100% 0 0);
-  }
-  30% {
-    clip-path: inset(0 0 0 0);
-  }
-  70% {
-    clip-path: inset(0 0 0 0);
-  }
-  100% {
-    clip-path: inset(0 100% 0 0);
-  }
+  --font-primary: "IBM Plex Sans", sans-serif;
 }

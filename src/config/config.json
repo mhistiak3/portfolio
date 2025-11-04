@@ -9,6 +9,6 @@
     "favicon": "/images/favicon.ico"
   },
   "style": {
-    "font": "IBM+Plex+Mono:wght@300;400;500;600;700"
+    "font": "IBM+Plex+Sans:wght@300;400;500;600;700"
   }
 }
