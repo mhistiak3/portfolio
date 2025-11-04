@@ -10,7 +10,7 @@ const Achievements = () => {
 
   return (
     <section className="section bg-body/50">
-      <div className="grid grid-cols-3">
+      <div className="grid sm:grid-cols-3 gap-y-10">
         <div className="flex items-center gap-x-2">
           <FaThermometerEmpty className="text-5xl text-yellow-400" />
 

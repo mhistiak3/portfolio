@@ -40,7 +40,7 @@
 
 /* button */
 .btn {
-  @apply px-3 py-2 text-sm cursor-pointer;
+  @apply px-3 py-2 text-sm cursor-pointer rounded-sm;
 }
 .btn-primary {
   @apply bg-primary/10 text-primary hover:bg-primary/20 transition;
@@ -68,4 +68,8 @@
 }
 .timeline_wrapper .timeline_item p {
   @apply leading-5 mb-1;
+}
+/* form */
+.form-control {
+  @apply w-full p-2 border border-primary/30 rounded-sm mt-2 focus:outline-none focus:border-primary;
 }

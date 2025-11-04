@@ -6,7 +6,8 @@
     "base_url": "https://istiak-ahammad.netlify.app/",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.ico"
+    "favicon": "/images/favicon.ico",
+    "copyright": "© 2025 Istiak Ahammad. All rights reserved."
   },
   "style": {
     "font": "IBM+Plex+Sans:wght@300;400;500;600;700"

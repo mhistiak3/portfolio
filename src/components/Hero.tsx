@@ -1,7 +1,7 @@
 import { HeroType } from "@/types";
 import { getData } from "@/utils/fetchData";
 import Image from "next/image";
-import { FaEnvelope, FaHeart, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaHeart, FaPhoneAlt } from "react-icons/fa";
 import AnimatedHeadline from "./AnimatedHeadline";
 import DynamicIcon from "./DynamicIcon";
 import WaterRipple from "./WaterRipple";
@@ -37,7 +37,7 @@ const Hero = () => {
             <ul className="flex flex-col gap-y-2">
               <li className="flex">
                 <b className="flex items-center gap-x-2 mr-1">
-                  <FaPhone /> Phone:
+                  <FaPhoneAlt /> Phone:
                 </b>
                 <a href={`tel:${heroData.phone}`} className="font-light">
                   {heroData.phone}

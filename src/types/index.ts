@@ -48,3 +48,10 @@ export type AchievementsType = {
   happy_clients: number;
   years_of_experience: number;
 };
+
+export type ContactType = {
+  address: string;
+  phone: string;
+  email: string;
+  form_action: string;
+};

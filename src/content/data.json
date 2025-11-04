@@ -91,6 +91,28 @@
   "achievements": {
     "completed_projects": 12,
     "happy_clients": 10,
-    "years_of_experience": 2
+    "years_of_experience": 2.5
+  },
+  "portfolio": {
+    "testimonials": [
+      {
+        "name": "Ashiq Al Gazi",
+        "position": "Project Manager, SoftNora",
+        "photo": "/images/testimonials/ashiq.jpg",
+        "feedback": "Istiak is a fantastic developer who delivered our project on time and exceeded our expectations."
+      },
+      {
+        "name": "Sharafat Hossain",
+        "position": "Founder, China Hut",
+        "photo": "/images/testimonials/bappi.jpg",
+        "feedback": "Working with Istiak was a pleasure. His expertise in Next.js helped us build a robust application."
+      }
+    ]
+  },
+  "contact": {
+    "address": "Dhaka, Bangladesh",
+    "phone": "+8801810077098",
+    "email": "mhistiak2@gmail.com",
+    "form_action": "https://formsubmit.co/estiyak1122@gmail.com"
   }
 }

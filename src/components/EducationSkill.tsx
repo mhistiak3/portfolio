@@ -22,12 +22,9 @@ const EducationSkill = () => {
   }, []);
   return (
     <section className="section" id="skills">
+      <h2 className="section-heading text-lg text-white">Education & Skills</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
-          <h2 className="section-heading text-lg text-white">
-            Education & Skills
-          </h2>
-
           <div className="grid grid-cols-2 gap-4">
             <div>
               <DynamicIcon
