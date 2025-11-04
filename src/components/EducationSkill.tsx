@@ -1,7 +1,7 @@
 "use client";
 import { EducationSkillType } from "@/types";
 import { getData } from "@/utils/fetchData";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import DynamicIcon from "./DynamicIcon";
 
 const EducationSkill = () => {
@@ -10,18 +10,15 @@ const EducationSkill = () => {
   ) as EducationSkillType;
 
   const { education_experience, skills } = educationSkillData;
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    // make the progress bars animate on mount
-    const progressBars = document.querySelectorAll(
-      "[data-percent]"
-    ) as NodeListOf<HTMLElement>;
-    progressBars.forEach((bar) => {
-      const percent = bar.getAttribute("data-percent");
-      if (percent) {
-        bar.style.width = percent + "%";
-      }
-    });
+    // Trigger animation after component mounts
+    const timer = setTimeout(() => {
+      setAnimate(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
   }, []);
   return (
     <section className="section" id="skills">
@@ -76,9 +73,8 @@ const EducationSkill = () => {
               </h3>
               <div className="border border-primary/40 h-1 rounded-full overflow-hidden p-[3px]">
                 <span
-                  data-percent={skill.level}
-                  className="h-px bg-primary block transition-all duration-1500 ease-in-out w-0"
-                  // style={{ width: skill.level + "%" }}
+                  className="h-px bg-primary block transition-all duration-1000 ease-out"
+                  style={{ width: animate ? `${skill.level}%` : "0%" }}
                 ></span>
               </div>
             </div>
