@@ -31,5 +31,61 @@
       "spoken_languages": "English, Bengali, Urdu, Arabic",
       "interests": "Traveling, Reading, Coding"
     }
+  },
+  "educations_skills": {
+    "education_experience": {
+      "education": [
+        {
+          "degree": "Hifzul Quran",
+          "institution": "Rawzatul Quran Madrasa",
+          "year": "2009 - 2013"
+        },
+        {
+          "degree": "Dawara-e-Hadith (Masters)",
+          "institution": "Arzabad Madrasah, Dhaka",
+          "year": "2021 - 2023"
+        },
+        {
+          "degree": "Web Development Course",
+          "institution": "Ostad, Udemy, LWS",
+          "year": "2020 - 2025"
+        }
+      ],
+      "experience": [
+        {
+          "position": "Intern Frontend Developer",
+          "company": "Themefisher",
+          "year": "2024 - 2025"
+        },
+        {
+          "position": "Junior Frontend Developer",
+          "company": "Themefisher",
+          "year": "2024 - present"
+        },
+        {
+          "position": "FullStack Developer",
+          "company": "Freelance",
+          "year": "2025 - present"
+        }
+      ]
+    },
+    "skills": [
+      {
+        "name": "HTML & CSS",
+        "level": 80
+      },
+      {
+        "name": "JavaScript",
+        "level": 70
+      },
+      {
+        "name": "React & Next.js",
+        "level": 60
+      },
+      {
+        "name": "Backend (Node.js & Express)",
+        "level": 40
+      }
+    ]
   }
 }

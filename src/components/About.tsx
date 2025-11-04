@@ -8,7 +8,7 @@ const About = () => {
       <div className="grid md:grid-cols-12 items-center gap-y-12">
         <div className="md:col-span-7 lg:col-span-8">
           <h2 className="section-heading text-lg text-white">About Me</h2>
-          <h3 className="text-2xl text-heading mb-4">{aboutData.title}</h3>
+          <h3 className="text-2xl text-primary mb-4">{aboutData.title}</h3>
           <p className="text-sm mb-6 w-11/12 md:w-7/10 leading-relaxed">
             {aboutData.description}
           </p>

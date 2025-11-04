@@ -5,9 +5,9 @@
 @theme {
   --color-body: #151a33;
   --color-container: #1a253f;
-  --color-primary: #b85260;
+  --color-primary: #4d79f6;
   --color-text: #8997bd;
-  --color-heading: #4d79f6;
+  --color-secondary: #b85260;
   --color-dark: #060b1b;
   --font-primary: "IBM Plex Sans", sans-serif;
 }

@@ -21,7 +21,7 @@ export default function AnimatedHeadline({
       <span className="relative inline-block min-w-[200px] text-sm">
         <span
           key={index}
-          className="inline-block relative pb-3 after:rounded-full after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:w-full after:bg-linear-to-r after:from-primary after:to-heading after:animate-[borderExpand_4.5s_ease-in-out]"
+          className="inline-block relative pb-3 after:rounded-full after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:w-full after:bg-linear-to-r after:from-secondary after:to-primary after:animate-[borderExpand_4.5s_ease-in-out]"
         >
           {headlines[index]}
         </span>

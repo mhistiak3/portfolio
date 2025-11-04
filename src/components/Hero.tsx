@@ -22,7 +22,7 @@ const Hero = () => {
                 height={176}
                 className="rounded-full object-cover size-full relative z-10"
               />
-              <div className="absolute bottom-0 right-0 size-8 rounded-full bg-heading text-white flex items-center justify-center z-20">
+              <div className="absolute bottom-0 right-0 size-8 rounded-full bg-primary text-white flex items-center justify-center z-20">
                 <FaHeart />
               </div>
             </div>
@@ -57,7 +57,7 @@ const Hero = () => {
               {heroData.socials.map((social) => (
                 <li
                   key={social.name}
-                  className="size-9 rounded-full bg-primary flex items-center justify-center hover:shadow-[0_4px_14px_0_rgba(184,82,96,0.8)] transition-shadow duration-300"
+                  className="size-9 rounded-full bg-secondary flex items-center justify-center hover:shadow-[0_4px_14px_0_rgba(184,82,96,0.8)] transition-shadow duration-300"
                 >
                   <a
                     href={social.url}

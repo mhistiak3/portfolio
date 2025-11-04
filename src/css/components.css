@@ -2,7 +2,7 @@
   @apply mx-auto  max-w-[1140px]! bg-container xl:my-14;
 }
 .section {
-  @apply p-6;
+  @apply p-7;
 }
 
 /* Animation */
@@ -30,25 +30,20 @@
     clip-path: inset(0 100% 0 0);
   }
 }
-
+/* section heading */
 .section-heading {
-  @apply text-lg text-white font-medium mb-6 relative;
+  @apply text-lg text-white font-medium! mb-6 relative inline-block;
 }
 .section-heading::after {
-  content: "";
-  position: absolute;
-  height: 3px;
-  width: 80px;
-  top: 30px;
-  left: 0;
-  border: 1px dashed var(--color-primary);
+  @apply content-[''] absolute h-[3px] w-full top-[30px] left-0 border border-dashed border-secondary;
 }
 
+/* button */
 .btn {
   @apply px-3 py-2 text-sm cursor-pointer;
 }
 .btn-primary {
-  @apply bg-heading/10 text-heading hover:bg-heading/20 transition;
+  @apply bg-primary/10 text-primary hover:bg-primary/20 transition;
 }
 .personal_info {
   @apply flex flex-col  gap-2;
@@ -57,5 +52,20 @@
   @apply text-sm flex gap-4;
 }
 .personal_info li b {
-  @apply font-medium w-30 block;
+  @apply font-medium! w-30 block;
+}
+
+/* timeline */
+.timeline_wrapper {
+  @apply border-l-2 border-secondary/20 border-dashed text-sm font-normal pl-4;
+}
+.timeline_wrapper .timeline_item {
+  @apply mb-6 last:mb-0 relative;
+}
+
+.timeline_wrapper .timeline_item::after {
+  @apply content-[''] absolute left-0 top-0.5 w-2.5 h-2.5 border-2 border-secondary rounded-full -ml-[21px];
+}
+.timeline_wrapper .timeline_item p {
+  @apply leading-5 mb-1;
 }

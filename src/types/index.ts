@@ -4,7 +4,7 @@ export type HeroType = {
   roles: string[];
   phone: string;
   email: string;
-  socials: Social[]
+  socials: Social[];
 };
 export type Social = {
   name: string;
@@ -22,4 +22,23 @@ export type AboutType = {
     spoken_languages: string;
     interests: string;
   };
+};
+
+export type EducationSkillType = {
+  education_experience: {
+    education: {
+      degree: string;
+      institution: string;
+      year: string;
+    }[];
+    experience: {
+      position: string;
+      company: string;
+      year: string;
+    }[];
+  };
+  skills: {
+    name: string;
+    level: number;
+  }[];
 };
