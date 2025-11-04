@@ -111,15 +111,30 @@
     "projects": [
       {
         "title": "Link Sharing Application",
-        "image": "/images/projects/ecommerce.jpg",
-        "url": "https://ecommerce.example.com",
+        "image": "/images/projects/link-share.png",
+        "demo": "https://github.com/mhistiak3/link-sharing-application",
+        "github": "https://github.com/mhistiak3/link-sharing-application",
         "category": "Frontend"
       },
       {
         "title": "MindScribe Blog Platform",
         "image": "/images/projects/mindscribe.png",
-        "url": "https://portfolio.example.com",
-        "category": "Frontend"
+        "demo": "https://github.com/mhistiak3/MindScribe",
+        "github": "https://github.com/mhistiak3/MindScribe",
+        "category": "FullStack"
+      },
+      {
+        "title": "Real Time Code Editor",
+        "image": "/images/projects/code-editor.png",
+        "demo": "https://github.com/mhistiak3/real-time-code-editor",
+        "github": "https://github.com/mhistiak3/real-time-code-editor",
+        "category": "Others"
+      },
+      {
+        "title": "AI Code Generator (Vibe Coding)",
+        "image": "/images/projects/bolt-clone.png",
+        "demo": "https://github.com/mhistiak3/bolt-clone",
+        "category": "Others"
       }
     ]
   },

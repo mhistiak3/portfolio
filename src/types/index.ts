@@ -55,13 +55,20 @@ export type ContactType = {
   email: string;
   form_action: string;
 };
-type Testimonial = {
+export type Testimonial = {
   name: string;
   position: string;
   photo: string;
   feedback: string;
 };
-
+export type Project = {
+  title: string;
+  category: string;
+  image: string;
+  demo: string;
+  github: string;
+};
 export type PortfolioType = {
   testimonials: Testimonial[];
+  projects: Project[];
 };

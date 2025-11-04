@@ -2,6 +2,7 @@ import { AchievementsType } from "@/types";
 import { getData } from "@/utils/fetchData";
 import { FaRegSmile, FaThermometerEmpty } from "react-icons/fa";
 import { FaTrophy } from "react-icons/fa6";
+import CountUp from "./CountUp";
 
 const Achievements = () => {
   const achievementsData: AchievementsType = getData(
@@ -16,7 +17,7 @@ const Achievements = () => {
 
           <div>
             <h3 className="text-2xl font-medium! mb-1 text-white">
-              {achievementsData.completed_projects}+
+              <CountUp value={achievementsData.completed_projects} />+
             </h3>
             <p className="text-sm">Completed Projects</p>
           </div>
@@ -27,7 +28,7 @@ const Achievements = () => {
 
           <div>
             <h3 className="text-2xl font-medium! mb-1 text-white">
-              {achievementsData.happy_clients}+
+              <CountUp value={achievementsData.happy_clients} />+
             </h3>
             <p className="text-sm">Happy Clients</p>
           </div>
@@ -38,7 +39,7 @@ const Achievements = () => {
 
           <div>
             <h3 className="text-2xl font-medium! mb-1 text-white">
-              {achievementsData.years_of_experience}+
+              <CountUp value={achievementsData.years_of_experience} />+
             </h3>
             <p className="text-sm">Years of Experience</p>
           </div>

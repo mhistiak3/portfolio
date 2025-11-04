@@ -4,19 +4,30 @@ import { getData } from "@/utils/fetchData";
 import Image from "next/image";
 import { FaCommentAlt } from "react-icons/fa";
 import "swiper/css";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import ProjectGallery from "./ProjectGallery";
 const Portfolio = () => {
-  const portfolioData: PortfolioType = getData("portfolio") as PortfolioType;
+  const portfolioData = getData("portfolio") as unknown as PortfolioType;
+  const { testimonials, projects } = portfolioData;
+
   return (
     <section className="section">
       <h2 className="section-heading text-lg text-white">Portfolio & Work</h2>
 
-      <div className="grid grid-cols-2 gap-4 mt-8">
-        <div>
-          <Swiper slidesPerView={1} autoplay={{ delay: 3000 }} loop={true}>
-            {portfolioData.testimonials.map((testimonial, index) => (
+      <div className="grid md:grid-cols-2 gap-4 mt-6">
+        {/* Swiper */}
+        <div className="md:mt-8">
+          <Swiper
+            className="w-full"
+            modules={[Autoplay]}
+            slidesPerView={1}
+            autoplay={{ delay: 3000 }}
+            loop={true}
+          >
+            {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
-                <div className="flex flex-col justify-center items-center text-center lg:w-11/12 mx-auto">
+                <div className="flex flex-col justify-center items-center text-center lg:w-11/12 mx-auto ">
                   <FaCommentAlt className="text-4xl text-primary mb-4" />
                   <p className="mb-6">{testimonial.feedback}</p>
 
@@ -36,6 +47,9 @@ const Portfolio = () => {
             ))}
           </Swiper>
         </div>
+
+        {/* gallery project */}
+        <ProjectGallery projects={projects} />
       </div>
     </section>
   );
