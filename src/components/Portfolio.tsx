@@ -17,13 +17,24 @@ const Portfolio = () => {
 
       <div className="grid md:grid-cols-2 gap-4 mt-6">
         {/* Swiper */}
-        <div className="md:mt-8">
+        <div className="md:mt-8 hidden md:block ">
           <Swiper
-            className="w-full"
             modules={[Autoplay]}
+            spaceBetween={20}
             slidesPerView={1}
-            autoplay={{ delay: 3000 }}
+            speed={1200}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
             loop={true}
+            touchRatio={0.9}
+            breakpoints={{
+              1024: {
+                slidesPerView: 1,
+              },
+            }}
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
