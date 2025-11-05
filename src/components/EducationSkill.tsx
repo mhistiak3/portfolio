@@ -25,7 +25,7 @@ const EducationSkill = () => {
   return (
     <section className="section" id="skills">
       <h2 className="section-heading text-lg text-white">Education & Skills</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 gap-y-12 items-center">
         <div>
           <div className="grid grid-cols-2 gap-4">
             <Timeline
@@ -41,10 +41,89 @@ const EducationSkill = () => {
           </div>
         </div>
 
-        <div>
-          <h3 className="text-lg font-semibold! bg-primary/20 text-white px-10 py-1.5 mb-10 w-max text-center mx-auto">
+        <div className="relative">
+          <h3 className="text-lg font-semibold! bg-primary/20 text-white px-10 py-1.5 mb-10 w-max text-center mx-auto relative z-10">
             Skills
           </h3>
+
+          {/* Arrow pointing to Frontend (from left) */}
+          <svg
+            className="absolute left-[15%] top-[45px] w-[120px] h-20 pointer-events-none"
+            style={{ zIndex: 1 }}
+          >
+            <defs>
+              <marker
+                id="arrowhead-left"
+                markerWidth="10"
+                markerHeight="10"
+                refX="9"
+                refY="3"
+                orient="auto"
+              >
+                <polygon points="0 0, 10 3, 0 6" fill="#4d79f6" />
+              </marker>
+            </defs>
+            <path
+              d="M 100 10 Q 60 10, 30 40"
+              stroke="#4d79f6"
+              strokeWidth="2"
+              fill="none"
+              markerEnd="url(#arrowhead-left)"
+            />
+          </svg>
+
+          {/* Arrow pointing to Backend (from right) */}
+          <svg
+            className="absolute right-[15%] top-[45px] w-[120px] h-20 pointer-events-none"
+            style={{ zIndex: 1 }}
+          >
+            <defs>
+              <marker
+                id="arrowhead-right"
+                markerWidth="10"
+                markerHeight="10"
+                refX="9"
+                refY="3"
+                orient="auto"
+              >
+                <polygon points="0 0, 10 3, 0 6" fill="#4d79f6" />
+              </marker>
+            </defs>
+            <path
+              d="M 20 10 Q 60 10, 90 40"
+              stroke="#4d79f6"
+              strokeWidth="2"
+              fill="none"
+              markerEnd="url(#arrowhead-right)"
+            />
+          </svg>
+
+          {/* Arrow pointing to Tools (from bottom) */}
+          <svg
+            className="absolute left-1/2 top-[45px] w-20 h-[140px] -translate-x-1/2 pointer-events-none"
+            style={{ zIndex: 1 }}
+          >
+            <defs>
+              <marker
+                id="arrowhead-bottom"
+                markerWidth="10"
+                markerHeight="10"
+                refX="9"
+                refY="3"
+                orient="auto"
+              >
+                <polygon points="0 0, 10 3, 0 6" fill="#4d79f6" />
+              </marker>
+            </defs>
+            <path
+              d="M 40 10 Q 40 60, 40 110"
+              stroke="#4d79f6"
+              strokeWidth="2"
+              fill="none"
+              markerEnd="url(#arrowhead-bottom)"
+            />
+          </svg>
+
           <div className="grid grid-cols-2 gap-x-8 gap-y-12 items-start ">
             {/* Frontend Skills */}
             <div className="flex flex-wrap gap-4 col-span-1 justify-center">
