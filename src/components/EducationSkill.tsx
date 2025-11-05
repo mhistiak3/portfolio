@@ -1,81 +1,73 @@
 "use client";
-import { EducationSkillType } from "@/types";
+
+import { EducationExperienceType } from "@/types";
 import { getData } from "@/utils/fetchData";
-import { useEffect, useState } from "react";
-import DynamicIcon from "./DynamicIcon";
+import Badge from "./Badge";
+import Timeline from "./Timeline";
 
 const EducationSkill = () => {
-  const educationSkillData: EducationSkillType = getData(
+  const educationSkillData: EducationExperienceType = getData(
     "educations_skills"
-  ) as EducationSkillType;
+  ) as EducationExperienceType;
 
   const { education_experience, skills } = educationSkillData;
-  const [animate, setAnimate] = useState(false);
 
-  useEffect(() => {
-    // Trigger animation after component mounts
-    const timer = setTimeout(() => {
-      setAnimate(true);
-    }, 100);
+  // make multiple array by category from skills
+  const skillsByCategory = skills.reduce((acc, skill) => {
+    const { category } = skill;
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(skill);
+    return acc;
+  }, {} as Record<string, { name: string; category: string }[]>);
 
-    return () => clearTimeout(timer);
-  }, []);
   return (
     <section className="section" id="skills">
       <h2 className="section-heading text-lg text-white">Education & Skills</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <div className="grid grid-cols-2 gap-4">
-            <div>
-              <DynamicIcon
-                icon="FaGraduationCap"
-                className="text-5xl text-secondary mb-1.5"
-              />
+            <Timeline
+              data={education_experience.education}
+              title="Education"
+              icon={"FaGraduationCap"}
+            />
+            <Timeline
+              data={education_experience.experience}
+              title="Experience"
+              icon={"FaBriefcase"}
+            />
+          </div>
+        </div>
 
-              <h3 className="text-base mb-6">Education</h3>
-              <div className="timeline_wrapper">
-                {education_experience.education.map((edu, index) => (
-                  <div key={`education-${index}`} className="timeline_item">
-                    <p>{edu.year}</p>
-                    <p className=" text-primary/80">{edu.degree}</p>
-                    <p>{edu.institution}</p>
-                  </div>
-                ))}
-              </div>
+        <div>
+          <h3 className="text-lg font-semibold! bg-primary/20 text-white px-10 py-1.5 mb-10 w-max text-center mx-auto">
+            Skills
+          </h3>
+          <div className="grid grid-cols-2 gap-x-8 gap-y-12 items-start ">
+            {/* Frontend Skills */}
+            <div className="flex flex-wrap gap-4 col-span-1 justify-center">
+              {skillsByCategory["Frontend"]?.map((skill, index) => (
+                <Badge key={`skill-frontend-${index}`} name={skill.name} />
+              ))}
             </div>
-            <div>
-              <DynamicIcon
-                icon="FaBriefcase"
-                className="text-5xl text-secondary mb-1.5"
-              />
-              <h3 className="text-base mb-6">Experience</h3>
-              <div className="timeline_wrapper">
-                {education_experience.experience.map((edu, index) => (
-                  <div key={`education-${index}`} className="timeline_item">
-                    <p>{edu.year}</p>
-                    <p className=" text-primary/80">{edu.position}</p>
-                    <p>{edu.company}</p>
-                  </div>
+
+            {/* Backend Skills */}
+            <div className="flex flex-wrap  gap-4 col-span-1 justify-center">
+              {skillsByCategory["Backend"]?.map((skill, index) => (
+                <Badge key={`skill-backend-${index}`} name={skill.name} />
+              ))}
+            </div>
+            {/* Tools Skills */}
+            <div className="col-span-2">
+              <div className="w-2/4 mx-auto flex flex-wrap gap-4  justify-center">
+                {skillsByCategory["Tools"]?.map((skill, index) => (
+                  <Badge key={`skill-tools-${index}`} name={skill.name} />
                 ))}
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="flex flex-col gap-y-10">
-          {skills.map((skill, index) => (
-            <div key={`skill-${index}`}>
-              <h3 className="font-medium! text-sm uppercase mb-2">
-                {skill.name}
-              </h3>
-              <div className="border border-primary/40 h-1 rounded-full overflow-hidden p-[3px]">
-                <span
-                  className="h-px bg-primary block transition-all duration-1000 ease-out"
-                  style={{ width: animate ? `${skill.level}%` : "0%" }}
-                ></span>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>

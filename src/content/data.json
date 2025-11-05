@@ -36,35 +36,35 @@
     "education_experience": {
       "education": [
         {
-          "degree": "Hifzul Quran",
-          "institution": "Rawzatul Quran Madrasa",
+          "title": "Hifzul Quran",
+          "organization": "Rawzatul Quran Madrasa",
           "year": "2009 - 2013"
         },
         {
-          "degree": "Dawara-e-Hadith (Masters)",
-          "institution": "Arzabad Madrasah, Dhaka",
+          "title": "Dawara-e-Hadith (Masters)",
+          "organization": "Arzabad Madrasah, Dhaka",
           "year": "2021 - 2023"
         },
         {
-          "degree": "Web Development Course",
-          "institution": "Ostad, Udemy, LWS",
+          "title": "Web Development Course",
+          "organization": "Ostad, Udemy, LWS",
           "year": "2020 - 2025"
         }
       ],
       "experience": [
         {
-          "position": "Intern Frontend Developer",
-          "company": "Themefisher",
+          "title": "Intern Frontend Developer",
+          "organization": "Themefisher",
           "year": "2024 - 2025"
         },
         {
-          "position": "Junior Frontend Developer",
-          "company": "Themefisher",
+          "title": "Junior Frontend Developer",
+          "organization": "Themefisher",
           "year": "2024 - present"
         },
         {
-          "position": "FullStack Developer",
-          "company": "Freelance",
+          "title": "FullStack Developer",
+          "organization": "Freelance",
           "year": "2025 - present"
         }
       ]
@@ -72,19 +72,59 @@
     "skills": [
       {
         "name": "HTML & CSS",
-        "level": 80
+        "category": "Frontend"
       },
       {
         "name": "JavaScript",
-        "level": 70
+        "category": "Frontend"
       },
       {
         "name": "React & Next.js",
-        "level": 60
+        "category": "Frontend"
       },
       {
-        "name": "Backend (Node.js & Express)",
-        "level": 40
+        "name": "Tailwind CSS",
+        "category": "Frontend"
+      },
+      {
+        "name": "Framer Motion",
+        "category": "Frontend"
+      },
+      {
+        "name": "Astrojs",
+        "category": "Frontend"
+      },
+      {
+        "name": "TypeScript",
+        "category": "Tools"
+      },
+      {
+        "name": "Node.js & Express",
+        "category": "Backend"
+      },
+      {
+        "name": "MongoDB",
+        "category": "Backend"
+      },
+      {
+        "name": "RESTful APIs",
+        "category": "Backend"
+      },
+      {
+        "name": "GraphQL",
+        "category": "Backend"
+      },
+      {
+        "name": "Git & GitHub",
+        "category": "Tools"
+      },
+      {
+        "name": "Sanity CMS",
+        "category": "Tools"
+      },
+      {
+        "name": "Docker",
+        "category": "Tools"
       }
     ]
   },
@@ -114,27 +154,31 @@
         "image": "/images/projects/link-share.png",
         "demo": "https://github.com/mhistiak3/link-sharing-application",
         "github": "https://github.com/mhistiak3/link-sharing-application",
-        "category": "Frontend"
+        "category": "Frontend",
+        "description": "A web application that allows users to share and manage links. Features include link categorization, search functionality, and user authentication."
       },
       {
         "title": "MindScribe Blog Platform",
         "image": "/images/projects/mindscribe.png",
         "demo": "https://github.com/mhistiak3/MindScribe",
         "github": "https://github.com/mhistiak3/MindScribe",
-        "category": "FullStack"
+        "category": "FullStack",
+        "description": "A blogging platform where users can create, edit, and share blog posts. Features include user authentication, rich text editing, and responsive design."
       },
       {
         "title": "Real Time Code Editor",
         "image": "/images/projects/code-editor.png",
         "demo": "https://github.com/mhistiak3/real-time-code-editor",
         "github": "https://github.com/mhistiak3/real-time-code-editor",
-        "category": "Others"
+        "category": "Others",
+        "description": "A web-based code editor that allows multiple users to collaborate in real-time. Supports syntax highlighting for various programming languages."
       },
       {
         "title": "AI Code Generator (Vibe Coding)",
         "image": "/images/projects/bolt-clone.png",
         "demo": "https://github.com/mhistiak3/bolt-clone",
-        "category": "Others"
+        "category": "Others",
+        "description": "An AI-powered code generator that helps developers create code snippets based on natural language descriptions. Supports multiple programming languages and frameworks."
       }
     ]
   },

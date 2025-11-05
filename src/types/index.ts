@@ -24,22 +24,22 @@ export type AboutType = {
   };
 };
 
-export type EducationSkillType = {
+export type EducationExperienceType = {
   education_experience: {
     education: {
-      degree: string;
-      institution: string;
+      title: string;
+      organization: string;
       year: string;
     }[];
     experience: {
-      position: string;
-      company: string;
+      title: string;
+      organization: string;
       year: string;
     }[];
   };
   skills: {
     name: string;
-    level: number;
+    category: string;
   }[];
 };
 
@@ -67,6 +67,7 @@ export type Project = {
   image: string;
   demo: string;
   github: string;
+  description: string;
 };
 export type PortfolioType = {
   testimonials: Testimonial[];

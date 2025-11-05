@@ -45,9 +45,9 @@ const ProjectGallery = ({ projects }: { projects: Project[] }) => {
   return (
     <div className="h-full">
       {/*  Tabs*/}
-      <ul className="grid gap-x-4 mb-6 grid-cols-4 text-center text-sm">
+      <ul className="grid gap-x-2 mb-6 grid-cols-4 text-center text-sm">
         <li
-          className={`px-4 py-2 border-b cursor-pointer transition-colors ${
+          className={` py-2 border-b cursor-pointer transition-colors ${
             activeFilter === "all"
               ? "border-primary text-primary"
               : "border-primary/40 text-text hover:text-primary"
@@ -59,7 +59,7 @@ const ProjectGallery = ({ projects }: { projects: Project[] }) => {
         {categories.map((category, index) => (
           <li
             key={index}
-            className={`px-4 py-2 border-b cursor-pointer transition-colors ${
+            className={`py-2 border-b cursor-pointer transition-colors ${
               activeFilter === category
                 ? "border-primary text-primary"
                 : "border-primary/40 text-text hover:text-primary"
@@ -100,19 +100,18 @@ const ProjectGallery = ({ projects }: { projects: Project[] }) => {
           onClick={closeModal}
         >
           <div
-            className="bg-container rounded-lg max-w-2xl w-full overflow-hidden shadow-2xl animate-[scaleIn_0.3s_ease-out]"
+            className="bg-container rounded-lg max-w-lg w-full overflow-hidden  animate-[scaleIn_0.3s_ease-out]"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
-            <button
-              onClick={closeModal}
-              className="absolute top-4 right-4 text-white/80 hover:text-white text-2xl z-10 bg-dark/50 rounded-full p-2 hover:bg-dark/70 transition"
-            >
-              <FaTimes />
-            </button>
-
             {/* Project Image */}
-            <div className="relative w-full h-64 md:h-80">
+            <div className="relative w-full h-50 md:h-70">
+              {/* Close Button */}
+              <button
+                onClick={closeModal}
+                className="absolute top-4 right-4 text-white/80 hover:text-white text-2xl z-10 bg-dark/50 rounded-full p-2 hover:bg-dark/70 transition"
+              >
+                <FaTimes />
+              </button>
               <Image
                 src={selectedProject.image}
                 alt={selectedProject.title}
@@ -123,9 +122,10 @@ const ProjectGallery = ({ projects }: { projects: Project[] }) => {
 
             {/* Project Details */}
             <div className="p-6">
-              <h3 className="text-2xl font-semibold text-white mb-2">
+              <h3 className="text-xl font-semibold text-white mb-2">
                 {selectedProject.title}
               </h3>
+              <p className="mb-6">{selectedProject.description} </p>
               <p className="text-sm text-primary mb-4">
                 {selectedProject.category}
               </p>
